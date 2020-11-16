@@ -1,0 +1,24 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.home {
+  width: 90%;
+  min-height: 80%;
+
+  &__content {
+    display: grid;
+    grid-template: auto 1fr / repeat(3, 1fr);
+    grid-column-gap: 1.25rem;
+
+    & .list {
+      display: grid;
+      grid-row-gap: 1.25rem;
+    }
+  }
+}
+
+

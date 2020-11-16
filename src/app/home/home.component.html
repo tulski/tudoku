@@ -1,0 +1,50 @@
+<div class="wrapper">
+  <mat-card *ngIf="!loading;else spinner" class="home">
+    <app-categories-filter [allCategories]="allCategories"
+                           [(categories)]="categories"></app-categories-filter>
+    <div class="home__content">
+
+      <h2 matLine>To do</h2>
+      <h2 matLine>Doing</h2>
+      <h2 matLine>Done</h2>
+
+      <div
+        class="list"
+        cdkDropList
+        [id]="'todo'"
+        cdkDropListSortingDisabled
+        [cdkDropListConnectedTo]="['doing','done']"
+        (cdkDropListDropped)="drop($event)">
+        <app-item *ngFor="let item of items | item:'todo' " cdkDrag [cdkDragData]="item"
+                  [item]="item"></app-item>
+      </div>
+
+      <div
+        class="list"
+        cdkDropList
+        [id]="'doing'"
+        cdkDropListSortingDisabled
+        [cdkDropListConnectedTo]="['todo','done']"
+        (cdkDropListDropped)="drop($event)">
+        <app-item *ngFor="let item of items | item:'doing'" cdkDrag [cdkDragData]="item"
+                  [item]="item"></app-item>
+      </div>
+
+      <div
+        class="list"
+        cdkDropList
+        [id]="'done'"
+        [cdkDropListConnectedTo]="['todo','doing']"
+        cdkDropListSortingDisabled
+        (cdkDropListDropped)="drop($event)">
+        <app-item *ngFor="let item of items | item:'done' " cdkDrag [cdkDragData]="item"
+                  [item]="item"></app-item>
+      </div>
+    </div>
+
+  </mat-card>
+  <ng-template #spinner>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>
+

@@ -1,5 +1,14 @@
 # Tudoku
 
+🚧 not finished yet
+---
+- my first Angular project,
+- not finished yet - app in early state,
+- tbh it needs to be rewritten with observables,
+- no connection with any db,
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
 ## Development server

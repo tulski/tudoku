@@ -1,0 +1,23 @@
+<mat-form-field style="width: 100%;">
+  <mat-chip-list #chipList aria-label="Filter by category">
+    <mat-chip
+      *ngFor="let category of categories"
+      (removed)="remove(category)">
+      {{category}}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input
+      placeholder="Filter by category"
+      #formInput
+      [formControl]="formControl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+    >
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let category of filteredCategories | async" [value]="category">
+      {{category}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+

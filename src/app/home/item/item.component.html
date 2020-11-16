@@ -1,0 +1,9 @@
+<mat-card>
+  <h3 matLine>{{item.title}}</h3>
+  <h4 matLine>
+    {{item.description}}
+  </h4>
+  <mat-chip-list *ngIf="item.categories.length">
+    <mat-basic-chip *ngFor="let category of item.categories">{{category}}</mat-basic-chip>
+  </mat-chip-list>
+</mat-card>

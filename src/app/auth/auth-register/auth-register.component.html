@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="form">
+  <h1 class="form__title">Create Account</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>username</mat-label>
+    <input matInput placeholder="username" name="username" formControlName="username">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input matInput placeholder="email" name="email" formControlName="email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input matInput placeholder="password" name="password" type="password" formControlName="password">
+  </mat-form-field>
+  <div class="form__buttons">
+    <button mat-flat-button color="primary" (click)="signup()">Sign up</button>
+    <a mat-stroked-button routerLink="../login">Log In</a>
+  </div>
+</form>

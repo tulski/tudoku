@@ -1,0 +1,15 @@
+<form class="form" [formGroup]="form">
+  <h1 class="form__title">Log in to your account</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input matInput placeholder="admin@email.com" name="password" formControlName="email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input matInput placeholder="admin" name="password" type="password" formControlName="password">
+  </mat-form-field>
+  <div class="form__buttons">
+    <button mat-flat-button color="primary" (click)="login()">Log in</button>
+    <a mat-stroked-button routerLink="../register">Sign up</a>
+  </div>
+</form>

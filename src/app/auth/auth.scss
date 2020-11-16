@@ -1,0 +1,42 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+
+  &__column {
+    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04);
+  }
+
+  &__column-two {
+    background-color: #5352ED;
+    background-image: url(../../assets/images/Saly-10.png);
+    background-position: center bottom;
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+  }
+}
+
+.form {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 460px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #485BBD;
+    margin: 1.25rem auto;
+  }
+
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
